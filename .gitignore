@@ -1,0 +1,62 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution and packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Test and lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDE and editor folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# SQLite transient files
+*.db-journal
+*.sqlite-journal
+
+# Local SQLite datasets
+data/*.db
+
+# Local environment files
+.env
+.env.*
+
+# Optional generated model artifacts
+# Uncomment these if you do not want to track trained models in git.
+# models/*.pkl
+# freight_cost_prediction/models/*.pkl
+# invoice_flagging/models/*.pkl
