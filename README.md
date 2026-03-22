@@ -129,7 +129,21 @@ streamlit run app.py
 
 ---
 
-## Local Setup
+## Application UI Snapshots
+ 
+ ### **A. Freight Cost Estimation**
+ ![Freight Prediction Screenshot](assets/freight_prediction.png)
+ 
+ ### **B. Invoice Risk Assessment**
+ *This module identifies high-risk invoices by tracking quantity/amount gaps.*
+ 
+ | Scenario: Low Amount Gap | Scenario: Large Amount Gap |
+ | :--- | :--- |
+ | ![Invoice Safe](assets/invoice_flag_low_gap.png) | ![Invoice Flag Risk](assets/invoice_flag_high_gap.png) |
+ 
+ ---
+ 
+ ## Local Setup
 
 ### 1. Create a virtual environment
 

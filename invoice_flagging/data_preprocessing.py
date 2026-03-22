@@ -40,11 +40,18 @@ def load_invoice_data():
 
 def create_invoice_risk_label(row):
     # Invoice total mismatch with item-level total
-    if(abs(row["invoice_dollars"] - row["total_item_dollars"]) > 5):
+    # Flag if gap is > $100 AND > 10% of the total item value
+    gap = abs(row["invoice_dollars"] - row["total_item_dollars"])
+    if row["total_item_dollars"] > 0:
+        percent_gap = gap / row["total_item_dollars"]
+    else:
+        percent_gap = 1.0 # High risk if item total is 0 but invoice has value
+
+    if gap > 100 and percent_gap > 0.1:
         return 1
 
-    # High receiving delay
-    if row["avg_receiving_delay"] > 10:
+    # High receiving delay (increased threshold to 30 days)
+    if row["avg_receiving_delay"] > 30:
         return 1
 
     return 0

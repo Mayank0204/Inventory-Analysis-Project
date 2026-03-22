@@ -251,22 +251,46 @@ def inject_styles():
                 font-weight: 600;
             }
 
-            [data-testid="stNumberInput"] input,
-            [data-testid="stTextInput"] input,
-            [data-baseweb="select"] > div {
-                background: rgba(6, 16, 25, 0.98) !important;
-                color: var(--text-strong) !important;
+            [data-testid="stNumberInput"] [data-baseweb="input"],
+            [data-testid="stTextInput"] [data-baseweb="input"],
+            div[data-baseweb="select"] > div {
+                background-color: #061019 !important;
+                color: #ecf4fb !important;
                 border-radius: 14px !important;
                 border: 1px solid rgba(120, 159, 189, 0.2) !important;
+                padding: 0 !important;
+            }
+
+            [data-testid="stNumberInput"] [data-baseweb="input"] > div,
+            [data-testid="stTextInput"] [data-baseweb="input"] > div {
+                background-color: transparent !important;
+                color: #ecf4fb !important;
+            }
+
+            [data-testid="stNumberInput"] input,
+            [data-testid="stTextInput"] input {
+                background-color: transparent !important;
+                color: #ecf4fb !important;
+                border: none !important;
+                height: 42px !important;
             }
 
             [data-testid="stNumberInput"] button {
-                color: var(--text-strong) !important;
+                background-color: transparent !important;
+                color: #38bdf8 !important;
+                border-radius: 0 !important;
+                border: none !important;
+                height: 42px !important;
+            }
+
+            [data-testid="stNumberInput"] button:hover {
+                background-color: rgba(56, 189, 248, 0.1) !important;
+                color: #8b5cf6 !important;
             }
 
             [data-testid="stNumberInput"] input::placeholder,
             [data-testid="stTextInput"] input::placeholder {
-                color: rgba(159, 180, 199, 0.72) !important;
+                color: rgba(159, 180, 199, 0.6) !important;
             }
 
             .hero-card {
